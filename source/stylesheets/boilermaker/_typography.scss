@@ -1,0 +1,32 @@
+/* Responsive Typography*/
+
+h1 {
+  font-size: modular_scale(3);
+  margin-bottom: modular_scale(-4);
+  @media(min-width: $large-screen) {
+    font-size: modular_scale(4);
+  }
+}
+h2 {
+  font-size: modular_scale(2);
+  @media(min-width: $large-screen) {
+    font-size: modular_scale(3);
+  }
+}
+h3 {
+  font-size: modular_scale(1);
+  @media(min-width: $large-screen) {
+    font-size: modular_scale(2);
+  }
+}
+h4 {
+  font-size: modular_scale(0);
+  @media(min-width: $large-screen) {
+    font-size: modular_scale(1);
+  }
+}
+p {
+  @media(min-width: $large-screen) {
+    font-size: 1.2em;
+  }
+}

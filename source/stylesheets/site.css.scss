@@ -1,0 +1,172 @@
+@charset "utf-8";
+// Karla Font. This can be altered in _variabless.scss
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,300,500,600);
+
+// Third Party Imports
+@import "vendor/normalize";
+
+// Thoughtbot Imports
+@import "bourbon";
+@import "base/base";
+@import "neat";
+
+// Boilermaker Imports
+@import "boilermaker/layout";
+@import "boilermaker/typography";
+
+// Partials Imports
+@import "partials/nav";
+@import "partials/footer";
+
+// Your scss can go here below
+
+.container {
+  @include outer-container();
+}
+
+.card {
+  border: 1px solid $light-gray;
+  padding: modular_scale(-1);
+}
+
+button, .btn {
+  background-color: inherit;
+  color: $action-color;
+  border: 1px solid $action-color;
+  box-sizing: border-box;
+}
+
+article {
+  margin-bottom: 2em;
+}
+
+.home-hero {
+  @include row();
+  background-color: $secondary-background-color;
+  padding: modular_scale(0);
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .figure {
+    @include span_columns(2);
+
+    img {
+      max-width: 100%;
+      border-radius: 50%;
+    }
+  }
+  .home-hero-right {
+    @include span_columns(10);
+    h2 {
+      font-weight: 300;
+      margin-bottom: .5em;
+    }
+  }
+}
+
+
+img {
+  width: 100%;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+
+.section-3 {
+  @include row();
+  margin-top: 3em;
+
+  .main-left {
+    @include span_columns(8);
+  }
+
+  .project-item {
+    display: flex;
+    flex-direction: row;
+
+    h2 a {
+      color: $dark-gray;
+    }
+
+    h2::after {
+      content: " ";
+      display: block;
+      border-bottom: 2px solid tomato;
+      width: 20%;
+    }
+
+    h3 {
+      color: $medium-gray;
+      font-weight: 300;
+      margin-bottom: 0;
+    }
+    .card-left {
+      background-color: tomato;
+      padding: 1em 3px;
+      width: modular_scale(0);
+    }
+
+    .card-right {
+      padding-left: modular_scale(-2);
+
+      button {
+        @include span_columns(8);
+      }
+    }
+
+    .project-photo {
+      @include span_columns(8);
+      @include omega();
+      margin-bottom: 1em;
+    }
+  }
+
+  .project-item--article {
+    h2::after {
+      border-bottom: 2px solid $dark-gray;
+    }
+    .card-left {
+      background-color: $dark-gray;
+    }
+  }
+
+  .project-item--open-source {
+    h2::after {
+      border-bottom: 2px solid $action-color;
+    }
+    .card-left {
+      background-color: $action-color;
+    }
+  }
+
+}
+
+.tools-aside {
+  @include span_columns(4);
+  background-color: $secondary-background-color;
+  padding: 1em;
+
+  h3 {
+    color: $secondary-background-color;
+    background-color: $action-color;
+    width: 100%;
+    padding: 5px;
+    padding-bottom: 0;
+  }
+
+  ul {
+    margin-bottom: 1em;
+
+    li {
+      font-weight: 600;
+
+      i {
+        width: 1.2em;
+      }
+    }
+  }
+}

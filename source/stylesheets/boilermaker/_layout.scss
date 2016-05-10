@@ -1,0 +1,19 @@
+/* General Layout*/
+$max-width: 90%;
+
+::selection {
+  background: #ffdfda; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ffdfda; /* Gecko Browsers */
+}
+
+pre {
+  background-color: $secondary-background-color;
+  padding: modular_scale(1);
+  border: 1px solid darken($secondary-background-color, 10%);
+
+  @include media($large-screen-up) {
+    width: 50%;
+  }
+}
