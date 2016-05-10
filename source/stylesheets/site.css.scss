@@ -170,3 +170,32 @@ img {
     }
   }
 }
+
+
+
+// About Section
+
+.about-main {
+  margin-top: 1em;
+  @include outer-container;
+  @include row();
+
+  .about-section-1 {
+    img {
+      @include span_columns(8);
+      @include shift(2);
+      margin-bottom: 3em;
+    }
+    article {
+      @include span_columns(6);
+      @include shift(3);
+
+      h1::after {
+        content: " ";
+        display: block;
+        border-bottom: 3px solid tomato;
+        width: 66%;
+      }
+    }
+  }
+}
