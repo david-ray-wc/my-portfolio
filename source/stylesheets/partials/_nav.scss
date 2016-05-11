@@ -2,11 +2,20 @@ nav {
   padding-top: modular_scale(1);
   border-bottom: 1px solid $base-border-color;
   text-align: center;
-  padding-bottom: modular_scale(0);
   @include outer-container;
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
   li {
     display: inline-block;
-    margin-right: modular_scale(3);
-    font-size: modular_scale(2);
+    margin-right: modular_scale(1);
+    font-size: modular_scale(1);
+
+    @include media($medium-screen-up) {
+      margin-right: modular_scale(3);
+      font-size: modular_scale(2);
+    };
   }
 }

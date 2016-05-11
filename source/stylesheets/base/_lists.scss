@@ -5,7 +5,10 @@ ol {
 
 li {
   margin-bottom: modular_scale(-1);
-  font-size: modular_scale(1)
+
+  @media(min-width: 600px) {
+    font-size: modular_scale(1);
+  };
 }
 
 dl {
