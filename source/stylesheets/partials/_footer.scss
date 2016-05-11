@@ -1,1 +1,6 @@
-
+footer {
+  padding-top: 1em;
+  @include outer-container();
+  color: $medium-gray;
+  text-align: right;
+}

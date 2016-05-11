@@ -128,7 +128,8 @@ img {
     .card-right {
       padding-left: modular_scale(-2);
 
-      button {
+      .btn {
+        text-align: center;
         @include span_columns(10);
 
         @include media($medium-screen-up) {
