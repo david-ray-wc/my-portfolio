@@ -1,0 +1,113 @@
+.section-main {
+  @include row();
+  margin-top: 3em;
+
+  .main-left {
+    @include span_columns(12);
+
+    @include media($medium-screen-up) {
+      @include span_columns(8);
+    };
+  }
+
+  .project-item {
+    display: flex;
+    flex-direction: row;
+
+    h2 a {
+      color: $dark-gray;
+    }
+
+    h2::after {
+      content: " ";
+      display: block;
+      border-bottom: 2px solid tomato;
+      width: 20%;
+    }
+
+    h3 {
+      color: $medium-gray;
+      font-weight: 300;
+      margin-bottom: 0;
+    }
+    .card-left {
+      background-color: tomato;
+      padding: 1em 3px;
+      width: modular_scale(0);
+    }
+
+    .card-right {
+      padding-left: modular_scale(-2);
+
+      .btn {
+        text-align: center;
+        @include span_columns(10);
+
+        @include media($medium-screen-up) {
+          @include span_columns(8);
+        };
+      }
+    }
+
+    .project-photo {
+      @include span_columns(10);
+
+      @include media($medium-screen-up) {
+        @include span_columns(8);
+      };
+      margin-bottom: 1em;
+    }
+  }
+
+  .project-item--article {
+    h2::after {
+      border-bottom: 2px solid $dark-gray;
+    }
+    .card-left {
+      background-color: $dark-gray;
+    }
+  }
+
+  .project-item--open-source {
+    h2::after {
+      border-bottom: 2px solid $action-color;
+    }
+    .card-left {
+      background-color: $action-color;
+    }
+  }
+
+}
+
+.tools-aside {
+  @include span_columns(10);
+  background-color: $secondary-background-color;
+  padding: 1em;
+
+  @include media($medium-screen-up) {
+    @include span_columns(4);
+  };
+
+  h3 {
+    color: $secondary-background-color;
+    background-color: $action-color;
+    width: 100%;
+    padding: 5px;
+    padding-bottom: 0;
+  }
+
+  ul {
+    margin-bottom: 1em;
+    list-style: none;
+    padding: 0;
+
+    li {
+      font-weight: 600;
+      margin: 0;
+
+      i {
+        width: 1.2em;
+      }
+    }
+  }
+}

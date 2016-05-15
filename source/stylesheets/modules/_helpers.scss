@@ -1,0 +1,37 @@
+.container {
+  @include outer-container();
+}
+
+.card {
+  border: 1px solid $light-gray;
+  padding: modular_scale(-1);
+}
+
+button, .btn {
+  background-color: inherit;
+  color: $action-color;
+  border: 1px solid $action-color;
+  box-sizing: border-box;
+}
+
+.btn-second {
+  margin-top: modular_scale(-1);
+  color: $dark-gray;
+  border: 1px solid $dark-gray;
+
+  &:hover, &:focus, &:visited {
+    background-color: $dark-gray;
+  }
+}
+
+article {
+  margin-bottom: 2em;
+}
+
+img {
+  width: 100%;
+}
+
+.img-circle {
+  border-radius: 50%;
+}

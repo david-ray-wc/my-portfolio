@@ -1,0 +1,36 @@
+.home-hero {
+  background-color: $secondary-background-color;
+  padding: modular_scale(0);
+
+  .figure {
+    @include span_columns(4);
+    @include shift(4);
+
+    @include media($medium-screen-up) {
+      @include span_columns(2);
+      @include shift(0);
+    };
+
+    img {
+      max-width: 100%;
+      border-radius: 50%;
+    }
+  }
+  .home-hero-right {
+    @include span_columns(12);
+
+    @include media($medium-screen-up) {
+      @include span_columns(10);
+      .icon-row {
+        font-size: modular_scale(0);
+      }
+    }
+    h2 {
+      font-weight: 300;
+      margin-bottom: .5em;
+    }
+    .icon-row {
+      font-size: modular_scale(-1);
+    }
+  }
+}

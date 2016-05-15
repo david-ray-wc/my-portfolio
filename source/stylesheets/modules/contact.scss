@@ -1,0 +1,25 @@
+.contact-main {
+  @include outer-container();
+
+  margin-top: 3em;
+
+  h1::after {
+    content: " ";
+    display: block;
+    border-bottom: 5px solid $dark-gray;
+    width: 33%;
+  }
+
+  article {
+    @include span_columns(12);
+
+    @include media($medium-screen-up) {
+      @include span_columns(8);
+      @include shift(2);
+    };
+
+    .icon-row {
+      margin-bottom: modular_scale(0);
+    }
+  }
+}
