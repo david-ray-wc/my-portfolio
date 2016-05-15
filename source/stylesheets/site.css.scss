@@ -36,6 +36,16 @@ button, .btn {
   box-sizing: border-box;
 }
 
+.btn-second {
+  margin-top: modular_scale(-1);
+  color: $dark-gray;
+  border: 1px solid $dark-gray;
+
+  &:hover, &:focus, &:visited {
+    background-color: $dark-gray;
+  }
+}
+
 article {
   margin-bottom: 2em;
 }
